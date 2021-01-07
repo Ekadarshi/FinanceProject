@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-﻿// T4 code generation is enabled for model 'C:\Users\BUSHRA\Source\Repos\FinanceProject\FinanceProject\Models\Model1.edmx'. 
-=======
-﻿// T4 code generation is enabled for model 'C:\Users\Dell\Source\Repos\Ekadarshi\FinanceProject\FinanceProject\Models\Model1.edmx'. 
->>>>>>> a3772e85279812d78794a95d28080c4a67e02c2f
+
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
