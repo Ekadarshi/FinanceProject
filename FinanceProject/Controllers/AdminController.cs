@@ -31,7 +31,7 @@ namespace FinanceProject.Controllers
                             Validation = user.validation
                         };
                 var data = u.ToList();
-                return Request.CreateResponse(HttpStatusCode.OK, users);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
             }
         }
     }
