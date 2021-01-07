@@ -20,9 +20,10 @@ namespace FinanceProject.Models
         public decimal CurrentLimit { get; set; }
         public System.DateTime ValidFrom { get; set; }
         public System.DateTime ValidTill { get; set; }
-        public int cvv { get; set; }
+       
+        public int CVV { get; set; }
     
-        public virtual UserTable UserTable { get; set; }
-        public virtual CardType CardType { get; set; }
+        public  UserTable UserTable { get; set; }
+        public  CardType CardType { get; set; }
     }
 }

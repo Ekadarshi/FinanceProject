@@ -24,7 +24,7 @@ namespace FinanceProject.Models
         public int ProductID { get; set; }
         public Nullable<System.DateTime> LastPaymentDate { get; set; }
     
-        public virtual UserTable UserTable { get; set; }
-        public virtual Product Product { get; set; }
+        public  UserTable UserTable { get; set; }
+        public  Product Product { get; set; }
     }
 }

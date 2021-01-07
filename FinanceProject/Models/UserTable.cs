@@ -32,10 +32,10 @@ namespace FinanceProject.Models
         public string CardType { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CardDetail> CardDetails { get; set; }
+        public  ICollection<CardDetail> CardDetails { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Finance> Finances { get; set; }
+        public  ICollection<Finance> Finances { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BankDetail> BankDetails { get; set; }
+        public ICollection<BankDetail> BankDetails { get; set; }
     }
 }

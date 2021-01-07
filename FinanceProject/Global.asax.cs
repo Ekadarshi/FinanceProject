@@ -12,6 +12,11 @@ namespace FinanceProject
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            //To Make the Jason as the default Values
+            GlobalConfiguration.Configuration.Formatters.Remove(GlobalConfiguration.Configuration.Formatters.XmlFormatter);
+            //To Internaly Serializer the Master and the child tables
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling =
+                Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         }
     }
 }

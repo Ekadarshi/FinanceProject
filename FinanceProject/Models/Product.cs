@@ -28,6 +28,6 @@ namespace FinanceProject.Models
         public string ProductDetails { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Finance> Finances { get; set; }
+        public ICollection<Finance> Finances { get; set; }
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="project1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="project1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admin">
           <Key>
             <PropertyRef Name="Email" />
@@ -37,7 +37,7 @@ warning 6002: The table/view 'project1.dbo.BankDetails' does not have a primary 
           <Property Name="CurrentLimit" Type="money" Nullable="false" />
           <Property Name="ValidFrom" Type="datetime" Nullable="false" />
           <Property Name="ValidTill" Type="datetime" Nullable="false" />
-          <Property Name="cvv" Type="int" Nullable="false" />
+          <Property Name="CVV" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="CardType">
           <Key>
@@ -192,8 +192,7 @@ warning 6002: The table/view 'project1.dbo.BankDetails' does not have a primary 
             <End Role="Finance" EntitySet="Finance" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="project1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -218,6 +217,7 @@ warning 6002: The table/view 'project1.dbo.BankDetails' does not have a primary 
           <Property Name="cvv" Type="Int32" Nullable="false" />
           <NavigationProperty Name="UserTable" Relationship="Self.FK__CardDetai__Email__34C8D9D1" FromRole="CardDetails" ToRole="UserTable" />
           <NavigationProperty Name="CardType" Relationship="Self.FK__CardDetail__Type__35BCFE0A" FromRole="CardDetails" ToRole="CardType" />
+          <Property Name="CVV" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="CardType">
           <Key>
@@ -403,13 +403,13 @@ warning 6002: The table/view 'project1.dbo.BankDetails' does not have a primary 
           <EntitySetMapping Name="CardDetails">
             <EntityTypeMapping TypeName="project1Model.CardDetail">
               <MappingFragment StoreEntitySet="CardDetails">
+                <ScalarProperty Name="CVV" ColumnName="CVV" />
                 <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="CurrentLimit" ColumnName="CurrentLimit" />
                 <ScalarProperty Name="ValidFrom" ColumnName="ValidFrom" />
                 <ScalarProperty Name="ValidTill" ColumnName="ValidTill" />
-                <ScalarProperty Name="cvv" ColumnName="cvv" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

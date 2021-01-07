@@ -19,6 +19,6 @@ namespace FinanceProject.Models
         public string BankName { get; set; }
         public string IFSCCode { get; set; }
     
-        public virtual UserTable UserTable { get; set; }
+        public  UserTable UserTable { get; set; }
     }
 }

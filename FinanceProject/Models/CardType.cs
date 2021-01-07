@@ -25,6 +25,6 @@ namespace FinanceProject.Models
         public Nullable<int> JoiningFee { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CardDetail> CardDetails { get; set; }
+        public  ICollection<CardDetail> CardDetails { get; set; }
     }
 }
