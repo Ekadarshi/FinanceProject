@@ -11,6 +11,7 @@ namespace FinanceProject
     {
         protected void Application_Start()
         {
+            GlobalConfiguration.Configuration.Formatters.Remove(GlobalConfiguration.Configuration.Formatters.XmlFormatter);
             GlobalConfiguration.Configure(WebApiConfig.Register);
             //To Make the Jason as the default Values
             GlobalConfiguration.Configuration.Formatters.Remove(GlobalConfiguration.Configuration.Formatters.XmlFormatter);

@@ -25,13 +25,13 @@ namespace FinanceProject.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<BankDetail> BankDetails { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<CardDetail> CardDetails { get; set; }
         public virtual DbSet<CardType> CardTypes { get; set; }
         public virtual DbSet<Finance> Finances { get; set; }
-        public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<UserTable> UserTables { get; set; }
-        public virtual DbSet<BankDetail> BankDetails { get; set; }
     }
 }
