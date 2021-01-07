@@ -18,8 +18,19 @@ namespace FinanceProject.Controllers
         {
             using (project1Entities db=new project1Entities())
             {
-                var data = from user in db.UserTables where user.validation == "ToValidate" select user;
-                List<UserTable> users = data.ToList();
+                var u = from user in db.UserTables
+                        where user.validation == "ToValidate"
+                        select new
+                        {
+                            Email = user.Email,
+                            Name = user.Name,
+                            Phone = user.PhoneNumber,
+                            Username = user.username,
+                            Address = user.Address,
+                            Cardtype = user.CardType,
+                            Validation = user.validation
+                        };
+                var data = u.ToList();
                 return Request.CreateResponse(HttpStatusCode.OK, users);
             }
         }
