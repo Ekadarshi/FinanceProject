@@ -20,10 +20,7 @@ namespace FinanceProject.Models
         public decimal CurrentLimit { get; set; }
         public System.DateTime ValidFrom { get; set; }
         public System.DateTime ValidTill { get; set; }
-<<<<<<< HEAD
-=======
-       
->>>>>>> a3772e85279812d78794a95d28080c4a67e02c2f
+
         public int CVV { get; set; }
     
         public  UserTable UserTable { get; set; }
